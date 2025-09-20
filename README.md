@@ -26,7 +26,7 @@ pip install flask
 2. Clone this repo and navigate inside:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/dwip-the-dev/mini-pay.git
 cd MiniPay
 ```
 
