@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MiniPay 💀 Demo Platform</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; font-family:'Poppins',sans-serif; }
+  body { background: linear-gradient(135deg, #ffffff, #f0f0f0); color:#111; overflow-x:hidden; }
+
+  /* Header */
+  header { padding:40px 20px; text-align:center; position:relative; }
+  header h1 { font-size:3em; color:#00fff0; text-shadow: 0 0 20px #00fff0, 0 0 40px #80fff5; animation: glow 2s infinite alternate; }
+  nav { margin-top:15px; }
+  nav a { text-decoration:none; margin:0 15px; font-weight:600; color:#111; padding:8px 20px; border-radius:50px; border:2px solid #00fff0; transition:0.3s; }
+  nav a:hover { background:#00fff0; color:#000; box-shadow: 0 0 15px #00fff0, 0 0 30px #80fff5; }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #00fff0, 0 0 20px #80fff5; }
+    to { text-shadow: 0 0 20px #00fff0, 0 0 40px #80fff5; }
+  }
+
+  .container { display:flex; flex-wrap:wrap; justify-content:center; margin:40px auto; gap:30px; max-width:1200px; }
+
+  .box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    padding:25px;
+    width:280px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor:pointer;
+  }
+  .box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,255,255,0.5);
+    border-color: rgba(0,255,255,0.8);
+  }
+  .box h3 { margin-bottom:15px; color:#00fff0; font-size:1.4em; }
+  .box p { font-size:0.95em; line-height:1.5; color:#111; }
+
+  .btn {
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 25px;
+    border-radius:50px;
+    font-weight:600;
+    color:#000;
+    text-decoration:none;
+    background: linear-gradient(135deg, #00fff0, #80fff5);
+    border:none;
+    transition:0.3s;
+    box-shadow: 0 5px 15px rgba(0,255,255,0.5);
+  }
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,255,255,0.8);
+  }
+
+  footer { text-align:center; padding:30px 20px; color:#666; font-size:0.9em; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MiniPay 💀 Demo</h1>
+  <nav>
+    <a href="/login">Login</a>
+    <a href="/register">Sign Up</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="box">
+    <h3>💰 Send Payments</h3>
+    <p>Send demo credits to anyone using their unique MiniPay address instantly.</p>
+    <a href="/dashboard" class="btn">Go Send</a>
+  </div>
+  <div class="box">
+    <h3>📥 Receive Payments</h3>
+    <p>Generate your personal MiniPay address and receive payments safely.</p>
+    <a href="/dashboard" class="btn">My Address</a>
+  </div>
+  <div class="box">
+    <h3>📜 Transaction History</h3>
+    <p>See all your sent and received payments with timestamps in real-time.</p>
+    <a href="/history" class="btn">View History</a>
+  </div>
+  <div class="box">
+    <h3>👥 User Accounts</h3>
+    <p>Create multiple demo accounts to test transactions between users.</p>
+    <a href="/register" class="btn">Register</a>
+  </div>
+  <div class="box">
+    <h3>🎨 Dashboard</h3>
+    <p>Monitor balances, send money, and track history from one interactive page.</p>
+    <a href="/dashboard" class="btn">Dashboard</a>
+  </div>
+  <div class="box">
+    <h3>⚡ Fast & Demo</h3>
+    <p>100% client-server demo using JSON storage, fully interactive and smooth.</p>
+    <a href="/dashboard" class="btn">Try Now</a>
+  </div>
+</div>
+
+<footer>
+  MiniPay Demo Platform &copy; 2025 | Just for fun 💀💀💀
+</footer>
+
+<script>
+  const boxes = document.querySelectorAll('.box');
+  boxes.forEach((b,i)=>{ b.style.transitionDelay = (i*0.05)+'s'; });
+  console.log("Welcome to MiniPay demo 💀💀");
+</script>
+
+</body>
+</html>
